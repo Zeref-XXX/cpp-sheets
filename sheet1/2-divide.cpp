@@ -1,3 +1,5 @@
+// 2. Write a Program to Divide two numbers taken as input and print the Quotient and Remainder.
+
 #include <iostream>
 using namespace std;
 int main()

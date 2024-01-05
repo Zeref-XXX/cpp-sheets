@@ -7,8 +7,8 @@ int main()
 {
     int number=4,num;
     cout << " Enter the number ";
-    // cin >> number;
-    num = number >>2 ;
-    cout<<number;
+    cin >> number;
+    num = number >>1 ;
+    cout<<number <<" / 2 : "<<num;
     return 0;
 }

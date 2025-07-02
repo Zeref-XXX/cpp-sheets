@@ -2,24 +2,17 @@
 using namespace std;
 
 void subSetSum(vector<int>&arr,int start,int n,vector<vector<int>>&ans,vector<int>temp,int sum){
-
      if(start==n){
         ans.push_back(temp);
         // cout<<sum<<" "<<endl;
         return ;
     }
-
     //no
     subSetSum(arr,start+1,arr.size(),ans,temp, sum);
-    
     //yes
     temp.push_back(arr[start]);
     subSetSum(arr,start+1,arr.size(),ans,temp, sum+arr[start]);
-    
 }
-
-
-
 int main()
 {
     vector<int>arr={1,2,3};
@@ -36,5 +29,4 @@ int main()
         }
         cout<<"} :"<<result<<endl;
     }
-
 }

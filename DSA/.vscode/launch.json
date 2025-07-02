@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Run Current C++ File",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${env:HOME}/vscode_binaries/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": true,
+      "MIMode": "gdb",
+      "preLaunchTask": "Build to Home (Named)",
+
+      // Adjust this path to your g++ version
+      "miDebuggerPath": "/usr/bin/gdb"
+    }
+  ]
+}
+

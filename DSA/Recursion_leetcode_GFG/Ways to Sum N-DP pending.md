@@ -14,3 +14,4 @@ ways(arr,m,sum){
 ```
 
 ---
+## need DP

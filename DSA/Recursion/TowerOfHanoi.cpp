@@ -15,21 +15,25 @@ using namespace std;
 
 int toh(int n, int source, int help, int destination)
 {
-    if(n==1){
-        cout<<"move n-1 to destination "<<endl;
+    if (n == 1)
+    {
+        cout << "disk " << n << " " << source << " to " << destination << endl;
         return 1;
     }
-    int move=0;
-    move +=toh(n-1,source,destination,help);
-    cout<<"move n to destination"<<endl;
+    int move = 0;
+    move += toh(n - 1, source, destination, help);
+    cout << "disk " << n << " " << source << " to " << destination << endl;
     move++;
 
-    move +=toh(n-1,source,destination,help);
+    move += toh(n - 1, help, source, destination);
     return move;
 }
 
 int main()
 {
     int n = 4;
-    cout << toh(n, 1, 2, 3);
+    int totalMoves = toh(n, 1, 2, 3);
+    cout << "Total moves: " << totalMoves << endl;
+
+    return 0;
 }

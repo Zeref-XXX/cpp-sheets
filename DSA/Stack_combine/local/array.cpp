@@ -73,15 +73,19 @@ public:
 int main()
 {
     Stack S(4);
-    cout<<"top has : "<<S.peek()<<endl;
-    S.push(5);
-    cout<<"top has : "<<S.peek()<<endl;
-    S.push(69);
-    S.pop();S.pop();S.pop();
-    S.push(40);
-    cout<<"top has : "<<S.peek()<<endl;
-    S.isSize();
-    S.push(45);S.push(34);S.push(12);
-    S.isEmpty();
+    // cout<<"top has : "<<S.peek()<<endl;
+    // S.push(5);
+    // cout<<"top has : "<<S.peek()<<endl;
+    // S.push(69);
+    // S.pop();S.pop();S.pop();
+    // S.push(40);
+    // cout<<"top has : "<<S.peek()<<endl;
+    // S.isSize();
+    // S.push(45);S.push(34);S.push(12);
+    // S.isEmpty();
+    S.push(-2);
+    cout<<S.isSize()<<endl;
+    cout<<S.peek()<<endl;
+
     return 0;
 }

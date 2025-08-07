@@ -10,10 +10,11 @@ int partition(vector<int>&arr,int start,int end)
             swap(arr[i],arr[pos]);
             pos++;
         }
-    }
+    } 
     swap(arr[pos], arr[end]);
     return pos;
 }
+//  [4, 1, 3, 9, 7]
 void quickSort(vector<int> &arr, int start, int end)
 {
     if(start>=end) return;

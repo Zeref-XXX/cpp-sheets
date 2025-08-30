@@ -14,4 +14,24 @@ Explanation: Subarrays with sum = 15 are [5, 2, 7, 1], [10, 5] and [10, 5, 2, 7,
 for(i=0 -> n)
     for(j=i ->n )
         if currentLen=k then maxL= max(maxL,currentLen)
+
+----TLE
+class Solution {
+  public:
+    int longestSubarray(vector<int>& arr, int k) {
+        int len=0; 
+        for(int i=0;i<arr.size();i++){
+            int sum=0;
+            for(int j=i;j<arr.size();j++){
+                sum+=arr[j]; 
+    			if(sum==k){
+    				len=max(len,j-i+1);
+    			}	
+            }
+        }
+        return len;
+    }
+};
+
 ```
+---

@@ -50,15 +50,34 @@ void postOrder(Node *root){
     cout<<root->data<<" ";
 }
 
+void level(Node*root){
+    queue<Node *>q;
+    vector<int>v;
+    q.push(root);
+    while(!q.empty()){
+        Node *temp=q.front();
+        v.push_back(temp->data);
+        q.pop();
+        if(temp->left !=NULL) q.push(temp->left);
+        if(temp->right!=NULL) q.push(temp->right);
+    }
+    for(int i=0;i<v.size();i++){
+        cout<<v[i]<<" ";
+    }
+}
+
 int main()
 {
     cout<<"Enter the root node : ";
     Node *root=Binary();
-    cout<<"\nPreORder ";
-    preOrder(root);
-    cout<<"\n InOrder";
-    inOrder(root);
-    cout<<"\n PostOrder ";
-    postOrder(root);
+    // cout<<"\nPreORder ";
+    // preOrder(root);
+    // cout<<"\n InOrder";
+    // inOrder(root);
+    // cout<<"\n PostOrder ";
+    // postOrder(root);
+    // cout<<endl;
+    cout<<"\n level : ";
+    level(root);
     cout<<endl;
 }

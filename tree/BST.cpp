@@ -44,14 +44,46 @@ void level(Node*root){
         cout<<v[i]<<" ";
     }
 }
+void preOrder(Node *root){
+    if(root==NULL)
+    return ;
+    cout<<root->data<<" ";
+    preOrder(root->left);
+    preOrder(root->right);
+}
+void inOrder(Node *root){
+    if(root==NULL)
+    return ;
+    inOrder(root->left);
+    cout<<root->data<<" ";
+    inOrder(root->right);
+}
+void postOrder(Node *root){
+    if(root==NULL)
+    return ;
+    postOrder(root->left);
+    postOrder(root->right);
+    cout<<root->data<<" ";
+}
+
 
 int main()
 {
-    int arr[] = {5, 3, 1, 2, 4, 6, 8, 9};
-    Node *root=NULL;
+    int arr[] = {6,3,17,5,11,18,2,1,20,14};
+    Node *root=NULL; 
     for(int i=0;i<8;i++){
         root=Insert(root,arr[i]);
     }
+    cout<<"LEvel : ";
     level(root);
     cout<<endl;
+    cout<<"PreOrder : ";
+    preOrder(root);
+    cout<<endl;
+    cout<<"InOrder : ";
+    inOrder(root);
+    cout<<endl;
+    cout<<"PostOrder :";
+    postOrder(root);
+
 }

@@ -8,6 +8,7 @@ Given a positive integer n. Your task is to generate a string list of all n-bit 
     11: all its prefixes (1 and 11) have more 1s than 0s.
     10: all its prefixes (1 and 10) have more 1s than 0s.
     So, the output is "11, 10".
+    
 ```cpp
 // User function template for C++
 class Solution {
